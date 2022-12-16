@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="itr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Reagan">
+    <meta name="description" content="My new cool project">
+    <meta name="keywords" content="HTML, CSS, SEO, web, web development">
+    <title>Final Assigment</title>
+    <link rel="shortcut icon" href="./assets/img/question-icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/style/register.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+    <script src="https://kit.fontawesome.com/aa299d89ff.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./assets/js/register.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <div class="title-a">
+                <h1>Web Design</h1>
+            </div>
+            <form class="search-box" onsubmit="return search()">
+                <button id="search-btn" onclick="return search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" name="Search" placeholder="Search" class="search" autocomplete="off" autofocus>
+            </form>
+
+    </header>
+    <main>
+        <img src="img/login_bg.jpg" class="bg">
+        <div id="container">
+            <form name="myform" onsubmit="return validateform()" enctype="multipart/form-data" action="cgi-bin/login2.cgi" method="post" id="myform">
+                <div class="input-group">
+                    <span id="span_username">Username:</span>
+					<input class="form-control" id="username" name="username" type="text" value="" placeholder="Only can enter 4-16 letters or numbers." autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <span id="span_password">Password:</span>
+					<input class="form-control" id="password" name="password" type="password" value="" placeholder="Password length is 6-12 digits." autocomplete="off"> 
+					<span class="input-group-btn">
+						<img src="img/eye_open.svg" id="passwordeye" alt="show/hide" onclick="show_hide_pwd('password')"/>
+					</span>
+                </div>
+                <div class="input-group">
+                    <span id="span_password2"> Confirm password:</span>
+					<input class="form-control" id="password2" name="password2" type="password" value=""  placeholder="Please confirm your password" autocomplete="off">
+                    <span class="input-group-btn">
+						<img src="img/eye_open.svg" id="password2eye" alt="show/hide" onclick="show_hide_pwd('password2')"/>
+					</span>
+                </div>
+                <div id="btn_div">
+                    <input name="registerButton" class="btn btn-primary" type="submit" id="register" value="Login">
+					<a href="./login.html">
+						<input class="btn btn-primary" name="loginButton" id="login" type="button" value="Register">
+					</a>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <p>© Xidi Wang 2022</p>
+            <div class="contect-info">
+                <p id="contect-me">Contect me</p>
+                <a href="https://github.com/Wxd990921"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/home?lang=en-ca"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
